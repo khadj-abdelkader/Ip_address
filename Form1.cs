@@ -67,7 +67,10 @@ namespace Ip_address
             }
             textBox1.Text = ip5 + " " + ip6 + " " + ip7 + " " + ip8;
 
-          numericUpDown9.Value = Decimal.ToInt32(numericUpDown1.Value) & Decimal.ToInt32(numericUpDown5.Value);
+            numericUpDown9.Value = Decimal.ToInt32(numericUpDown1.Value) & Decimal.ToInt32(numericUpDown5.Value);
+            numericUpDown10.Value = Decimal.ToInt32(numericUpDown2.Value) & Decimal.ToInt32(numericUpDown6.Value);
+            numericUpDown11.Value = Decimal.ToInt32(numericUpDown3.Value) & Decimal.ToInt32(numericUpDown7.Value);
+            numericUpDown12.Value = Decimal.ToInt32(numericUpDown4.Value) & Decimal.ToInt32(numericUpDown8.Value);
         }
             
         private void textBox1_TextChanged(object sender, EventArgs e)
