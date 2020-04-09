@@ -22,15 +22,54 @@ namespace Ip_address
         public object When { get; private set; }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {       
+                var ip1 = Convert.ToString(Decimal.ToInt32(numericUpDown1.Value), 2);
+                var ip2 = Convert.ToString(Decimal.ToInt32(numericUpDown2.Value), 2);
+                var ip3 = Convert.ToString(Decimal.ToInt32(numericUpDown3.Value), 2);
+                var ip4 = Convert.ToString(Decimal.ToInt32(numericUpDown4.Value), 2);
+                for (var i1 = ip1.Length; i1 < 8; i1++)
                 {
-                var ip1 = Convert.ToString(numericUpDown1.Value, 2);
-                var ip2 = Convert.ToString(numericUpDown2.Value, 2);
-                var ip3 = Convert.ToString(numericUpDown3.Value, 2);
-                var ip4 = Convert.ToString(numericUpDown4.Value, 2);
+                    ip1 = "0" + ip1;
                 }
-        }
+                for (var i2 = ip2.Length; i2 < 8; i2++)
+                {
+                    ip2 = "0" + ip2;
+                }
+                for (var i3 = ip3.Length; i3 < 8; i3++)
+                {
+                    ip3 = "0" + ip3;
+                }
+                for (var i4 = ip4.Length; i4 < 8; i4++)
+                {
+                    ip4 = "0" + ip4;
+                }
+            textBox1.Text = ip1 + " " + ip2 + " " + ip3 + " " + ip4;
 
+            var ip5= Convert.ToString(Decimal.ToInt32(numericUpDown5.Value), 2);
+            var ip6= Convert.ToString(Decimal.ToInt32(numericUpDown6.Value), 2);
+            var ip7= Convert.ToString(Decimal.ToInt32(numericUpDown7.Value), 2);
+            var ip8= Convert.ToString(Decimal.ToInt32(numericUpDown8.Value), 2);
+            for (var i5 = ip5.Length; i5 < 8; i5++)
+            {
+                ip5 = "0" + ip5;
+            }
+            for (var i6 = ip6.Length; i6 < 8; i6++)
+            {
+                ip6 = "0" + ip6;
+            }
+            for (var i7 = ip7.Length; i7 < 8; i7++)
+            {
+                ip7 = "0" + ip7;
+            }
+            for (var i8 = ip8.Length; i8 < 8; i8++)
+            {
+                ip8 = "0" + ip8;
+            }
+            textBox1.Text = ip5 + " " + ip6 + " " + ip7 + " " + ip8;
+
+          numericUpDown9.Value = Decimal.ToInt32(numericUpDown1.Value) & Decimal.ToInt32(numericUpDown5.Value);
+        }
+            
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -72,6 +111,16 @@ namespace Ip_address
         }
 
         private void numericUpDown11_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown9_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
