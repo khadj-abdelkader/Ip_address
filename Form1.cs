@@ -65,7 +65,7 @@ namespace Ip_address
             {
                 ip8 = "0" + ip8;
             }
-            textBox1.Text = ip5 + " " + ip6 + " " + ip7 + " " + ip8;
+            textBox2.Text = ip5 + " " + ip6 + " " + ip7 + " " + ip8;
 
             numericUpDown9.Value = Decimal.ToInt32(numericUpDown1.Value) & Decimal.ToInt32(numericUpDown5.Value);
             numericUpDown10.Value = Decimal.ToInt32(numericUpDown2.Value) & Decimal.ToInt32(numericUpDown6.Value);
